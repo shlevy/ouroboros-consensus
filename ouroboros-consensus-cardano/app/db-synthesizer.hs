@@ -40,7 +40,7 @@ main = withStdTerminalHandles $ do
       -- TODO Parse this from a config file
       spec =
         [ TxOutsSpec
-            { duplicates = 14999999
+            { duplicates = 1499
             , txOut = TxOutSpec
                 { nativeAssets = []
                 , datum = Nothing
@@ -48,7 +48,7 @@ main = withStdTerminalHandles $ do
                 }
             }
         , TxOutsSpec
-            { duplicates = 14999999
+            { duplicates = 1499
             , txOut = TxOutSpec
                 { nativeAssets = [ NativeAssetMintsSpec { nameLengths = Set.singleton 5 } ]
                 , datum = Just $ Inline 54
