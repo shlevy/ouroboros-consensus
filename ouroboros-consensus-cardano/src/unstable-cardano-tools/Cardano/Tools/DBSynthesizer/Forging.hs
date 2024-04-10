@@ -180,6 +180,8 @@ runForge epochSize_ nextSlot opts chainDB blockForging cfg genTxs = do
 
         when (mbCurTip /= SuccesfullyAddedBlock (blockPoint newBlock)) $
             exitEarly' "block not adopted"
+        lift . putStrLn $ "forged block " ++ show bcBlockNo ++ " at slot " ++ show currentSlot
+        
 
 -- | Context required to forge a block
 data BlockContext blk = BlockContext
