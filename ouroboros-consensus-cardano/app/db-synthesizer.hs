@@ -28,7 +28,6 @@ import           Cardano.Tools.DBSynthesizer.Run
 import           Cardano.Tools.DBSynthesizer.Tx
 import           DBSynthesizer.Parsers
 import           Main.Utf8 (withStdTerminalHandles)
-import qualified Data.Set as Set
 import           System.Exit
 
 
@@ -40,19 +39,11 @@ main = withStdTerminalHandles $ do
       -- TODO Parse this from a config file
       spec =
         [ TxOutsSpec
-            { duplicates = 14999999
+            { duplicates = 15999999
             , txOut = TxOutSpec
                 { nativeAssets = []
                 , datum = Nothing
                 , delegation = DelegateHash
-                }
-            }
-        , TxOutsSpec
-            { duplicates = 14999999
-            , txOut = TxOutSpec
-                { nativeAssets = [ NativeAssetMintsSpec { nameLengths = Set.singleton 5 } ]
-                , datum = Just $ Inline 54
-                , delegation = NoDelegate
                 }
             }
         ]

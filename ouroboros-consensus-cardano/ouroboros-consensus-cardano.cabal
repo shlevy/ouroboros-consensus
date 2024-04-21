@@ -590,7 +590,6 @@ executable db-synthesizer
     , cardano-crypto-class
     , cardano-ledger-core
     , cardano-ledger-shelley
-    , containers
     , optparse-applicative
     , unstable-cardano-tools
     , with-utf8
